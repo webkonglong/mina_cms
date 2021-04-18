@@ -1,0 +1,70 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: PingFang SC Medium, PingFang SC Medium-Medium;
+}
+
+html, body, #root {
+	background-color: #fff !important;
+	color: #202C3A;
+	color: rgba(0, 0, 0, 0.85);
+}
+
+#root {
+	width: 100%;
+	height: 100%;
+}
+
+.ant-layout {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	padding-bottom: 200px;
+}
+
+.ant-layout-header {
+	background-color: #fff !important;
+	padding: 0px 30px 0 50px !important;
+}
+
+.app-menu {
+	font-size: 16px;
+	float: right;
+}
+
+.app-menu span {
+	margin-left: 30px;
+	cursor: pointer;
+}
+
+.app-menu .active-menu {
+	color: rgb(254, 97, 64);
+}
+
+.ant-layout-footer {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	background: url(/img/footer.jpg);
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	padding: 0px 50px !important;
+	height: 200px;
+	font-size: 16px;
+	line-height: 200px;
+	color: rgb(125, 138, 153);
+}
+
+.ant-layout-footer p {
+	padding: 0px;
+	display: inline-block;
+	margin-right: 200px;
+}
+
+.ant-layout-footer span {
+	margin-right: 50px;
+	cursor: pointer;
+}
+
