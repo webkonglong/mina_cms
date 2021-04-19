@@ -20,11 +20,13 @@ export default [
       //   path: '/video',
       //   title: '视频',
       //   component: '@/pages/video',
-      // }, {
-      //   path: '/tool',
-      //   title: '工具',
-      //   component: '@/pages/tool',
-      // }, {
+      // },
+      {
+        path: '/tool',
+        title: '工具',
+        component: '@/pages/tool',
+      },
+      // , {
       //   path: '/case',
       //   title: '案例',
       //   component: '@/pages/case',
