@@ -16,11 +16,17 @@ export default [
       //   path: '/news',
       //   title: '新闻',
       //   component: '@/pages/news',
-      // }, {
-      //   path: '/video',
-      //   title: '视频',
-      //   component: '@/pages/video',
       // },
+      {
+        path: '/video',
+        title: '视频',
+        component: '@/pages/video',
+      },
+      {
+        path: '/play',
+        title: '播放视频',
+        component: '@/pages/video/play',
+      },
       {
         path: '/tool',
         title: '工具',

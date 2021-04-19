@@ -5,10 +5,14 @@ import menu from './menu';
 import Icon from '@/component/icon';
 
 export default (props: { children: React.FC; location: any }): JSX.Element => {
-  const [router, setRouter] = useState<string>(props.location.pathname);
+  const [router, setRouter] = useState<string>('');
 
   useEffect(() => {
-    setRouter(props.location.pathname);
+    let pathname = props.location.pathname;
+    if (props.location.pathname === '/play') {
+      pathname = '/video';
+    }
+    setRouter(pathname);
   }, [props.location.pathname]);
 
   return (
