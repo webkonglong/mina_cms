@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Layout, Select } from 'antd';
 import { history } from 'umi';
 import menu from './menu';
-import logo from './img/logo.svg';
 import Icon from '@/component/icon';
 
 export default (props: { children: React.FC; location: any }): JSX.Element => {
   const [router, setRouter] = useState<string>(props.location.pathname);
+
+  useEffect(() => {
+    setRouter(props.location.pathname);
+  }, [props.location.pathname]);
+
   return (
     <Layout>
       <Layout.Header>
@@ -26,15 +30,16 @@ export default (props: { children: React.FC; location: any }): JSX.Element => {
           ))}
           <Select
             placeholder="选择语言"
-            style={{ width: 120 }}
+            style={{ width: 148 }}
             bordered={false}
+            value="zh"
           >
-            <Select.Option value="zh">中文</Select.Option>
+            <Select.Option value="zh">简体中文</Select.Option>
             <Select.Option value="en">English</Select.Option>
           </Select>
         </span>
       </Layout.Header>
-      <div className="body">{props.children}</div>
+      {props.children}
       <Layout.Footer>
         <p>©2021 Mina. Started by O(1) Labs.</p>
         <span>官网</span>

@@ -12,7 +12,6 @@ html, body, #root {
 
 #root {
 	width: 100%;
-	height: 100%;
 }
 
 .body {
@@ -26,9 +25,6 @@ html, body, #root {
 
 .ant-layout {
 	width: 100%;
-	height: 100%;
-	position: relative;
-	padding-bottom: 200px;
 }
 
 .ant-layout-header {
@@ -45,7 +41,7 @@ html, body, #root {
 }
 
 .app-menu span {
-	margin-left: 30px;
+	margin-left: 50px;
 	cursor: pointer;
 }
 
@@ -54,9 +50,6 @@ html, body, #root {
 }
 
 .ant-layout-footer {
-	position: absolute;
-	left: 0px;
-	bottom: 0px;
 	width: 100%;
 	background: url(/img/footer.png);
 	background-repeat: no-repeat; 
