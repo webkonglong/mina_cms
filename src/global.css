@@ -72,3 +72,91 @@ html, body, #root {
 	cursor: pointer;
 }
 
+
+
+
+
+
+
+
+
+.c-min-banner {
+  height: 300px;
+  width: 100%;
+  background: url(/img/min_banner.png);
+  background-repeat: no-repeat;
+  background-size: 100% 300px;
+  font-size: 40px;
+  color: #222;
+  padding-top: 92px;
+  text-align: center;
+}
+
+.c-min-banner p {
+	margin: 0 0 5px 0;
+}
+
+
+
+
+
+
+.c-tab {
+	height: 94px;
+	font-size: 18px;
+	color: #000;
+	padding-top: 40px;
+}
+
+.c-tab span {
+	display: inline-block;
+	margin-right: 50px;
+	cursor: pointer;
+}
+
+.c-tab .c-active-tab {
+	color: #FF603B;
+	border-bottom: 2px solid #FF603B;
+}
+
+
+.ant-pagination {
+	text-align: right;
+}
+
+
+.ant-pagination-item {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	border: 1px solid #B7B7B7;
+	color: #B7B7B7;
+	background-color: transparent !important;
+}
+
+.ant-pagination-prev, .ant-pagination-next {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	border: 1px solid #222;
+	color: #222;
+	background-color: transparent !important;
+}
+
+.ant-pagination-item button, .ant-pagination-prev button, .ant-pagination-next button {
+	background-color: transparent !important;
+}
+
+.ant-pagination-item-active {
+	color: #FF603B !important;
+	border: 1px solid #FF603B !important;
+}
+
+.ant-pagination-disabled {
+	color: #f1f1f1 !important;
+	border: 1px solid #f1f1f1 !important;
+}

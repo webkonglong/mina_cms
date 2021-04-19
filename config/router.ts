@@ -7,11 +7,12 @@ export default [
         path: '/',
         component: '@/pages/home',
       },
+      {
+        path: '/ecology',
+        title: '生态',
+        component: '@/pages/ecology',
+      },
       // {
-      //   path: '/ecology',
-      //   title: '生态',
-      //   component: '@/pages/ecology',
-      // }, {
       //   path: '/news',
       //   title: '新闻',
       //   component: '@/pages/news',
