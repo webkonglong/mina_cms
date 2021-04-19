@@ -3,13 +3,14 @@ import { Layout, Select } from 'antd';
 import { history } from 'umi';
 import menu from './menu';
 import logo from './img/logo.svg';
+import Icon from '@/component/icon';
 
 export default (props: { children: React.FC; location: any }): JSX.Element => {
   const [router, setRouter] = useState<string>(props.location.pathname);
   return (
     <Layout>
       <Layout.Header>
-        <img src={logo} />
+        <Icon type="iconmina-logo" className="logo" />
         <span className="app-menu">
           {menu.map((item) => (
             <span
