@@ -2,7 +2,7 @@ import Banner from '@/component/banner';
 import styles from './news.less';
 import Tab from '@/component/tab';
 import { useState, useEffect } from 'react';
-import originData from './data';
+import originData from './data.tsx';
 import startIndex from '@/local_modules/startIndex';
 import { Pagination } from 'antd';
 const PAGE_ZIZE = 10;

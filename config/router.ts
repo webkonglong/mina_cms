@@ -18,6 +18,11 @@ export default [
         component: '@/pages/news',
       },
       {
+        path: '/news-details',
+        title: '新闻',
+        component: '@/pages/news/details',
+      },
+      {
         path: '/video',
         title: '视频',
         component: '@/pages/video',
