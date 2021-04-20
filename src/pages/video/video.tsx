@@ -6,6 +6,7 @@ import originData from './data';
 import startIndex from '@/local_modules/startIndex';
 import Icon from '@/component/icon';
 import { Pagination } from 'antd';
+import { history } from 'umi';
 const PAGE_ZIZE = 9;
 
 export default () => {
@@ -50,7 +51,12 @@ export default () => {
               <div className={styles.itemImg}>
                 <img src={item.img} alt="" />
                 <div className={styles.link}>
-                  <Icon type="iconplayback_icon" />
+                  <Icon
+                    type="iconplayback_icon"
+                    onClick={() => {
+                      history.push('/play?id=' + item.video);
+                    }}
+                  />
                 </div>
               </div>
               <p>{item.name}</p>
