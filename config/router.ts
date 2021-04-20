@@ -12,11 +12,11 @@ export default [
         title: '生态',
         component: '@/pages/ecology',
       },
-      // {
-      //   path: '/news',
-      //   title: '新闻',
-      //   component: '@/pages/news',
-      // },
+      {
+        path: '/news',
+        title: '新闻',
+        component: '@/pages/news',
+      },
       {
         path: '/video',
         title: '视频',
@@ -32,11 +32,11 @@ export default [
         title: '工具',
         component: '@/pages/tool',
       },
-      // , {
-      //   path: '/case',
-      //   title: '案例',
-      //   component: '@/pages/case',
-      // }
+      {
+        path: '/case',
+        title: '案例',
+        component: '@/pages/case',
+      },
     ],
   },
 ];

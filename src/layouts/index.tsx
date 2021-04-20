@@ -15,6 +15,10 @@ export default (props: { children: React.FC; location: any }): JSX.Element => {
     setRouter(pathname);
   }, [props.location.pathname]);
 
+  const backToTop = () => {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  };
+
   return (
     <Layout>
       <Layout.Header>
@@ -50,6 +54,14 @@ export default (props: { children: React.FC; location: any }): JSX.Element => {
         <span>推特</span>
         <span>电报</span>
         <span>社区</span>
+
+        <Icon
+          onClick={() => {
+            backToTop();
+          }}
+          type="iconhuidaodingbu"
+          className="back-to-top"
+        />
       </Layout.Footer>
     </Layout>
   );
