@@ -8,10 +8,8 @@ export default () => {
 
   useEffect(() => {
     if (location?.query?.id) {
-      const data = originData.find(
-        (item) => item.video === location?.query?.id,
-      );
-      setName(data?.name || '');
+      const data = originData.find((item) => +item.id === +location?.query?.id);
+      setName(data?.zh_Name || '');
       const onPlayerReady = (event) => {
         event.target.playVideo();
       };
@@ -25,7 +23,7 @@ export default () => {
           new window.YT.Player('player', {
             height: '788',
             width: '1400',
-            videoId: data?.video,
+            videoId: data?.url,
             events: {
               onReady: onPlayerReady,
             },

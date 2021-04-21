@@ -32,11 +32,7 @@ export default () => {
         />
         <div className={styles.data}>
           {data.map((item, i) => (
-            <div
-              key={item.id}
-              className={styles.item}
-              style={{ marginRight: (i + 1) % 4 === 0 ? '0px' : '40px' }}
-            >
+            <div key={item.id} className={styles.item}>
               <div className={styles.itemImg}>
                 <img src={item.img} alt="" />
                 <div className={styles.link}>

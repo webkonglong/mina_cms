@@ -2,27 +2,21 @@ import Banner from '@/component/banner';
 import styles from './tool.less';
 import Tab from '@/component/tab';
 import { useState, useEffect } from 'react';
+import { message } from 'antd';
 import originData from './data';
-import startIndex from '@/local_modules/startIndex';
 import Icon from '@/component/icon';
-import { Pagination } from 'antd';
-const PAGE_ZIZE = 24;
 
 export default () => {
   const [tab, setTab] = useState<number>(0);
-  const [current, setCurrent] = useState<number>(1);
   const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
-    setData(
-      originData
-        .filter((item) => item.tab === tab)
-        .slice(
-          startIndex(current, PAGE_ZIZE),
-          startIndex(current, PAGE_ZIZE) + PAGE_ZIZE,
-        ),
-    );
-  }, [current, tab]);
+    if (tab === 0) {
+      setData(originData);
+    } else {
+      setData(originData.filter((item) => item.tab === tab));
+    }
+  }, [tab]);
 
   return (
     <div>
@@ -34,7 +28,14 @@ export default () => {
       />
       <div className={styles.body}>
         <Tab
-          tabs={['全部', '区块链浏览器', '钱包', '运维工具', '基础设施']}
+          tabs={[
+            '全部',
+            '区块链浏览器',
+            '钱包',
+            '运维工具',
+            '基础设施',
+            '其他',
+          ]}
           tab={tab}
           change={(tab) => {
             setTab(tab);
@@ -42,32 +43,26 @@ export default () => {
         />
         <div className={styles.data}>
           {data.map((item, i) => (
-            <div
-              key={item.id}
-              className={styles.item}
-              style={{ marginRight: (i + 1) % 6 === 0 ? '0px' : '40px' }}
-            >
+            <div key={item.id} className={styles.item}>
               <div className={styles.itemImg}>
                 <img src={item.img} alt="" />
                 <div className={styles.link}>
-                  <Icon type="iconExternallink_icon" />
+                  <Icon
+                    type="iconExternallink_icon"
+                    onClick={() => {
+                      if (item.url) {
+                        window.open(item.url);
+                      } else {
+                        message.error('暂无页面');
+                      }
+                    }}
+                  />
                 </div>
               </div>
-              <p>{item.name}</p>
+              <p className={styles.name}>{item.zh_name}</p>
+              <p className={styles.title}>{item.zh_title}</p>
             </div>
           ))}
-          {originData.filter((item) => item.tab === tab).length > PAGE_ZIZE && (
-            <Pagination
-              size="default"
-              total={originData.filter((item) => item.tab === tab).length}
-              current={current}
-              showSizeChanger={false}
-              defaultPageSize={PAGE_ZIZE}
-              onChange={(val) => {
-                setCurrent(val);
-              }}
-            />
-          )}
         </div>
       </div>
     </div>

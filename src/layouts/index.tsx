@@ -50,10 +50,34 @@ export default (props: { children: React.FC; location: any }): JSX.Element => {
       {props.children}
       <Layout.Footer>
         <p>©2021 Mina. Started by O(1) Labs.</p>
-        <span>官网</span>
-        <span>推特</span>
-        <span>电报</span>
-        <span>社区</span>
+        <span
+          onClick={() => {
+            window.open('https://minaprotocol.com/');
+          }}
+        >
+          官网
+        </span>
+        <span
+          onClick={() => {
+            window.open('https://twitter.com/minaprotocol');
+          }}
+        >
+          推特
+        </span>
+        <span
+          onClick={() => {
+            window.open('https://t.me/minaprotocol');
+          }}
+        >
+          电报
+        </span>
+        <span
+          onClick={() => {
+            window.open('https://forums.minaprotocol.com/');
+          }}
+        >
+          社区
+        </span>
 
         <Icon
           onClick={() => {
