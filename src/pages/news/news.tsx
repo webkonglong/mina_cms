@@ -3,25 +3,19 @@ import styles from './news.less';
 import Tab from '@/component/tab';
 import { useState, useEffect } from 'react';
 import originData from './data.tsx';
-import startIndex from '@/local_modules/startIndex';
-import { Pagination } from 'antd';
-const PAGE_ZIZE = 10;
+import { history } from 'umi';
 
 export default () => {
   const [tab, setTab] = useState<number>(0);
-  const [current, setCurrent] = useState<number>(1);
   const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
-    setData(
-      originData
-        .filter((item) => item.tab === tab)
-        .slice(
-          startIndex(current, PAGE_ZIZE),
-          startIndex(current, PAGE_ZIZE) + PAGE_ZIZE,
-        ),
-    );
-  }, [current, tab]);
+    if (tab === 0) {
+      setData(originData);
+    } else {
+      setData(originData.filter((item: any) => item.tab === tab));
+    }
+  }, [tab]);
 
   return (
     <>
@@ -40,7 +34,13 @@ export default () => {
           }}
         />
         {data.map((item) => (
-          <div key={item.id} className={styles.news}>
+          <div
+            key={item.id}
+            className={styles.news}
+            onClick={() => {
+              history.push('/news-details?id=' + item.id);
+            }}
+          >
             <img src={item.img} alt="" />
             <div className={styles.new}>
               <div className={styles.name}>{item.name}</div>
@@ -49,18 +49,6 @@ export default () => {
             </div>
           </div>
         ))}
-        {originData.filter((item) => item.tab === tab).length > PAGE_ZIZE && (
-          <Pagination
-            size="default"
-            total={originData.filter((item) => item.tab === tab).length}
-            current={current}
-            showSizeChanger={false}
-            defaultPageSize={PAGE_ZIZE}
-            onChange={(val) => {
-              setCurrent(val);
-            }}
-          />
-        )}
       </div>
     </>
   );

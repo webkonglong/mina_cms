@@ -92,7 +92,7 @@ export default () => {
     <div className={styles.details}>
       <div className={styles.title}>{data.name}</div>
       <div className={styles.time}>{data.time}</div>
-      <div className="news-details">{data.body}</div>
+      <div>{data.body}</div>
     </div>
   );
 };
