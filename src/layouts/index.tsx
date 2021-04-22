@@ -12,6 +12,9 @@ export default (props: { children: React.FC; location: any }): JSX.Element => {
     if (props.location.pathname === '/play') {
       pathname = '/video';
     }
+    if (props.location.pathname === '/case-details') {
+      pathname = '/case';
+    }
     setRouter(pathname);
   }, [props.location.pathname]);
 

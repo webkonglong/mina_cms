@@ -42,6 +42,11 @@ export default [
         title: '案例',
         component: '@/pages/case',
       },
+      {
+        path: '/case-details',
+        title: '案例',
+        component: '@/pages/case/details',
+      },
     ],
   },
 ];
