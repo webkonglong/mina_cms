@@ -2,6 +2,7 @@ export default [
   {
     id: 1,
     tab: 1,
+    img: '/news/1.png',
     time: '2021-4-14',
     source: 'Source：Mina Protocol twitter',
     zh_name: "Mina's public token sale is now complete!",
@@ -44,6 +45,7 @@ export default [
   {
     id: 2,
     tab: 1,
+    img: '/news/2.png',
     time: '2021/04/12',
     source: '来自 Mina Protocol 中文 微信公众号',
     zh_name: 'Mina公募注意事项汇总',
@@ -156,6 +158,7 @@ export default [
   {
     id: 3,
     tab: 4,
+    img: '/news/3.png',
     source: 'Source：https://medium.com/@minaprotocol ',
     time: '2021-4-11',
     zh_name: '信用风险平台 Teller 将利用 Mina Protocol 构建去中心化借贷市场',
@@ -209,6 +212,7 @@ export default [
   {
     id: 5,
     tab: 3,
+    img: '/news/4.png',
     time: '2021-4-9',
     source: 'Source：Mina Protocol blog',
     zh_name: 'Mina新赠款计划Prism',
@@ -393,6 +397,7 @@ export default [
   {
     id: 5,
     tab: 1,
+    img: '/news/5.jpg',
     time: '2021/04/12',
     source: '来自 Mina Protocol 中文 微信公众号',
     zh_name: 'Mina协议概述—新的简洁区块链平台的功能',
@@ -675,6 +680,7 @@ export default [
   {
     id: 6,
     tab: 3,
+    img: '/news/6.jpg',
     time: '2021-4-1',
     source: 'Source：Mina Protocol blog',
     zh_name: '社区排行榜回顾',
@@ -1183,6 +1189,7 @@ export default [
   {
     id: 7,
     tab: 2,
+    img: '/news/7.jpg',
     time: '2021/03/21',
     source: '来自 chainnews',
     zh_name: '轻量级优势之外，Mina 更是一套基于零知识证明的生态系统',
@@ -1577,6 +1584,7 @@ export default [
   {
     id: 8,
     tab: 2,
+    img: '/news/8.jpg',
     time: '2021/03/29',
     source: '来自 chainnews',
     zh_name: '解析轻量级区块链协议 Mina 特性、运作机制与 Coinlist 参与教程',
@@ -1981,6 +1989,7 @@ export default [
   {
     id: 9,
     tab: 1,
+    img: '/news/9.jpg',
     time: '2021/03/26',
     source: '来自 Mina Protocol 中文 微信公众号',
     zh_name: 'Mina融资历程及Coinlist认购的详细解读（重点推荐）',
@@ -2153,6 +2162,7 @@ export default [
   {
     id: 10,
     tab: 4,
+    img: '/news/10.jpg',
     time: '2021-3-23',
     source: 'Source：Mina Protocol blog',
     zh_name: '构建真实世界和加密之间的私密通道:三个使用案例',

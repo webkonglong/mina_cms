@@ -1,12 +1,28 @@
 .body {
-  width: 1400px;
+  width: 1440px;
   margin: 0 auto;
   padding-bottom: 70px;
 }
 
+.news:hover {
+  background-color: #ff603b;
+  padding: 20px;
+  .name {
+    color: #fff;
+  }
+  .abstract {
+    color: #fff;
+  }
+  .time {
+    color: #fff;
+  }
+}
+
 .news {
   margin-bottom: 50px;
-  height: 150px;
+  height: 190px;
+  padding: 20px;
+  cursor: pointer;
 
   img {
     display: inline-block;
@@ -37,7 +53,7 @@
   .abstract {
     color: #333;
     font-size: 18px;
-    height: 66px;
+    height: 54px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

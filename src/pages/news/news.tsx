@@ -43,8 +43,8 @@ export default () => {
           >
             <img src={item.img} alt="" />
             <div className={styles.new}>
-              <div className={styles.name}>{item.name}</div>
-              <div className={styles.abstract}>{item.abstract}</div>
+              <div className={styles.name}>{item.zh_name}</div>
+              <div className={styles.abstract}>{item.zh_introduction}</div>
               <div className={styles.time}>{item.time}</div>
             </div>
           </div>
