@@ -210,7 +210,7 @@ export default [
     ),
   },
   {
-    id: 5,
+    id: 4,
     tab: 3,
     img: '/news/4.png',
     time: '2021-4-9',
@@ -396,7 +396,7 @@ export default [
   },
   {
     id: 5,
-    tab: 1,
+    tab: 2,
     img: '/news/5.jpg',
     time: '2021/04/12',
     source: '来自 Mina Protocol 中文 微信公众号',
