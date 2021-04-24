@@ -1,26 +1,32 @@
 export default [
   {
-    title: '首页',
+    zh_title: '首页',
+    en_titke: 'Home',
     url: '/',
   },
   {
-    title: '生态',
+    zh_title: '生态',
+    en_titke: 'Ecology',
     url: '/ecology',
   },
   {
     title: '新闻',
+    en_titke: 'News',
     url: '/news',
   },
   {
-    title: '视频',
+    zh_title: '视频',
+    en_titke: 'Videos',
     url: '/video',
   },
   {
-    title: '工具',
+    zh_title: '工具',
+    en_titke: 'Tools',
     url: '/tool',
   },
   {
-    title: '案例',
+    zh_title: '案例',
+    en_titke: 'Cases',
     url: '/case',
   },
 ];

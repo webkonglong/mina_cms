@@ -1,56 +1,63 @@
 import styles from './home.less';
 import Icon from '@/component/icon';
 import { history } from 'umi';
-
-const data1 = [
-  {
-    icon: 'iconabout_icon',
-    title: '关于',
-    introduce: 'MINA 介绍.',
-    url: '/',
-  },
-  {
-    icon: 'iconEcology',
-    title: '生态',
-    introduce: "We're on a mission.",
-    url: '/ecology',
-  },
-  {
-    icon: 'iconnews_icon',
-    title: '新闻',
-    introduce: '了解 Mina 最新动态.',
-    url: '/news',
-  },
-];
-
-const data2 = [
-  {
-    icon: 'iconvideo_icon',
-    title: '视频',
-    introduce: '畅享 YouTube 最新视频资料.',
-    url: '/video',
-  },
-  {
-    icon: 'icontool_icon',
-    title: '工具',
-    introduce: '工具在手,项目我有.',
-    url: '/tool',
-  },
-  {
-    icon: 'iconanli',
-    title: '案例',
-    introduce: '典型案例，深度刨析.',
-    url: '/case',
-  },
-];
+import { useMemo, useContext } from 'react';
+import { StoreContext } from '@/context/languageContext';
+import language from './i18n';
 
 export default () => {
+  const { state } = useContext(StoreContext);
+  const data1 = useMemo(() => {
+    return [
+      {
+        icon: 'iconabout_icon',
+        title: language[state.language]['about'],
+        introduce: language[state.language]['aboutDoc'],
+        url: '/',
+      },
+      {
+        icon: 'iconEcology',
+        title: language[state.language]['ecology'],
+        introduce: language[state.language]['ecologyDoc'],
+        url: '/ecology',
+      },
+      {
+        icon: 'iconnews_icon',
+        title: language[state.language]['news'],
+        introduce: language[state.language]['newsDoc'],
+        url: '/news',
+      },
+    ];
+  }, [state, language]);
+
+  const data2 = useMemo(() => {
+    return [
+      {
+        icon: 'iconvideo_icon',
+        title: language[state.language]['videos'],
+        introduce: language[state.language]['videosDoc'],
+        url: '/video',
+      },
+      {
+        icon: 'icontool_icon',
+        title: language[state.language]['tools'],
+        introduce: language[state.language]['toolsDoc'],
+        url: '/tool',
+      },
+      {
+        icon: 'iconanli',
+        title: language[state.language]['cases'],
+        introduce: language[state.language]['casesDoc'],
+        url: '/case',
+      },
+    ];
+  }, [state, language]);
+
   return (
     <>
       <div className={styles.banner}>
         <div className={styles.body}>
-          <p>Mina 是一个旨在传达区块链初心的</p>
-          <p>底层协议——真正的去中心化、可拓展和安全。</p>
+          <p>{language[state.language]['banner']}</p>
         </div>
       </div>
       <div className={styles.menu}>
@@ -71,7 +78,11 @@ export default () => {
                     <div
                       className={styles.btn2}
                       onClick={() => {
-                        history.push(item.url);
+                        if (item.url === '/') {
+                          window.open('https://minaprotocol.com/about');
+                        } else {
+                          history.push(item.url);
+                        }
                       }}
                     >
                       <Icon type="iconjinru" />
@@ -97,7 +108,11 @@ export default () => {
                     <div
                       className={styles.btn2}
                       onClick={() => {
-                        history.push(item.url);
+                        if (item.url === '/') {
+                          window.open('https://minaprotocol.com/about');
+                        } else {
+                          history.push(item.url);
+                        }
                       }}
                     >
                       <Icon type="iconjinru" />
