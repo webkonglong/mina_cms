@@ -3,6 +3,7 @@ import styles from './video.less';
 import originData from './data';
 import { useLocation } from 'umi';
 import { StoreContext } from '@/context/languageContext';
+import VideoLoading from '@/component/videoLoading';
 export default () => {
   const location = useLocation();
   const [name, setName] = useState<string>('');
@@ -49,8 +50,9 @@ export default () => {
 
   return (
     <div className={styles.player}>
-      <div id="player">
-        <div className={styles.loading}>视频正在加载中...</div>
+      <div className="video-player-box">
+        <VideoLoading />
+        <div id="player" className="video-player"></div>
       </div>
       <p className={styles.playerDoc}>{name}</p>
     </div>

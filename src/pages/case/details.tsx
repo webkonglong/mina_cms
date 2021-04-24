@@ -3,6 +3,7 @@ import styles from './case.less';
 import { useLocation } from 'umi';
 import { useState, useEffect, useContext } from 'react';
 import { StoreContext } from '@/context/languageContext';
+import VideoLoading from '@/component/videoLoading';
 
 export default () => {
   const location = useLocation();
@@ -39,8 +40,9 @@ export default () => {
   return (
     <div className={styles.player}>
       <div className={styles.body}>
-        <div id="case-player">
-          <div className={styles.loading}>视频正在加载中...</div>
+        <div className="video-player-box">
+          <VideoLoading />
+          <div id="case-player" className="video-player"></div>
         </div>
         <p>{data?.time}</p>
         {state.language === 'zh' ? data?.zh_body : data?.en_body}

@@ -166,3 +166,39 @@ html, body, #root {
 	margin-top: 90px;
 	color: #000;
 }
+
+
+
+.c-video-loading {
+	width: 1400px;
+	height: 788px;
+	line-height: 788px;
+	text-align: center;
+	font-size: 50px;
+	color: rgba(0, 0, 0, 0.55);
+}
+
+@keyframes rotate{
+    from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+}
+
+.c-video-loading-icon {
+	transition: 0.5s;
+    transform-origin: 30px 30px;  
+    animation: rotate 1s linear infinite;
+}
+
+.video-player-box {
+	width: 1400px;
+	height: 788px;
+	position: relative;
+}
+
+.video-player {
+	width: 1400px;
+	height: 788px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
