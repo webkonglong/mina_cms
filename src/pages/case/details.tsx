@@ -1,11 +1,13 @@
 import originData from './data.tsx';
 import styles from './case.less';
 import { useLocation } from 'umi';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { StoreContext } from '@/context/languageContext';
 
 export default () => {
   const location = useLocation();
   const [data, setData] = useState<string>('');
+  const { state } = useContext(StoreContext);
 
   useEffect(() => {
     if (location?.query?.id) {
@@ -41,7 +43,7 @@ export default () => {
           <div className={styles.loading}>视频正在加载中...</div>
         </div>
         <p>{data?.time}</p>
-        {data?.zh_body}
+        {state.language === 'zh' ? data?.zh_body : data?.en_body}
       </div>
     </div>
   );
