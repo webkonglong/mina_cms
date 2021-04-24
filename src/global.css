@@ -172,10 +172,15 @@ html, body, #root {
 .c-video-loading {
 	width: 1400px;
 	height: 788px;
-	line-height: 788px;
 	text-align: center;
 	font-size: 50px;
 	color: rgba(0, 0, 0, 0.55);
+	padding-top: 350px;
+}
+
+.c-video-loading .c-video-loading-newwork {
+	font-size: 20px;
+	margin-top: 20px;
 }
 
 @keyframes rotate{
@@ -184,8 +189,6 @@ html, body, #root {
 }
 
 .c-video-loading-icon {
-	transition: 0.5s;
-    transform-origin: 30px 30px;  
     animation: rotate 1s linear infinite;
 }
 
