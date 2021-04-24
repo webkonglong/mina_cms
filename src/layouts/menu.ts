@@ -10,7 +10,7 @@ export default [
     url: '/ecology',
   },
   {
-    title: '新闻',
+    zh_title: '新闻',
     en_titke: 'News',
     url: '/news',
   },

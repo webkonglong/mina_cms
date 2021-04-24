@@ -1,12 +1,15 @@
 import Banner from '@/component/banner';
 import styles from './ecology.less';
 import Tab from '@/component/tab';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import originData from './data';
 import Icon from '@/component/icon';
 import { message } from 'antd';
+import language from './i18n';
+import { StoreContext } from '@/context/languageContext';
 
 export default () => {
+  const { state } = useContext(StoreContext);
   const [tab, setTab] = useState<number>(0);
   const [data, setData] = useState<any[]>([]);
 
@@ -16,15 +19,13 @@ export default () => {
 
   return (
     <div>
-      <Banner
-        title={[
-          'Mina 旨在打造一个蓬勃的去中心化网络和',
-          '开放的可编程货币—所有人都能参与、创造、交易和壮大',
-        ]}
-      />
+      <Banner title={[language[state.language]['banner']]} />
       <div className={styles.body}>
         <Tab
-          tabs={['StakingPool', '支持机构']}
+          tabs={[
+            language[state.language]['stakingPool'],
+            language[state.language]['backers'],
+          ]}
           tab={tab}
           change={(tab) => {
             setTab(tab);
