@@ -57,14 +57,14 @@ export default [
     zh_Name: '在Mina上开发',
     en_name: 'Building on Mina',
   },
-  {
-    img: '/video/2-3.png',
-    tab: 2,
-    id: 8,
-    url: 'https://www.crowdcast.io/e/mina-illuminate-summit/10',
-    zh_Name: '零知识状态',
-    en_name: 'The State of Zero Knowledge',
-  },
+  // {
+  //   img: '/video/2-3.png',
+  //   tab: 2,
+  //   id: 8,
+  //   url: 'https://www.crowdcast.io/e/mina-illuminate-summit/10',
+  //   zh_Name: '零知识状态',
+  //   en_name: 'The State of Zero Knowledge',
+  // },
   {
     img: '/video/2-4.png',
     tab: 2,
@@ -229,35 +229,3 @@ export default [
     en_name: 'Staking as a Service',
   },
 ];
-
-// export default [
-//   {img: "/video/1-1.png", tab: 1, id: 1, url: "https://www.crowdcast.io/e/mina-illuminate-summit/10", zh_Name: "去中心化的坚实基础", en_name: "Ouroboros Samasika: A Solid Foundation for Decentralization"},
-//   {img: "/video/1-2.png", tab: 1, id: 2, url: "https://m.youtube.com/watch?v=zlNFfu-IHvE", zh_Name: "世界上最轻的区块链", en_name: "Mina protocol(Mina) - The lightest blockchain in the world!"},
-//   {img: "/video/1-3.png", tab: 1, id: 3, url: "https://www.crowdcast.io/e/mina-illuminate-summit/4", zh_Name: "协议的概述和改善", en_name: "Panel: Community ToolingProtocol Overview & Enhancements"},
-//   {img: "/video/1-4.png", tab: 1, id: 4, url: "https://m.youtube.com/watch?v=12Nv6HeNUeU&feature=youtu.be", zh_Name: "新的加密货币将于2021年4月发布| Mina协议——世界上“最轻”的区块链", en_name: "New Cryptocurrency Launching in April 2021 | Mina Protocol - The World's 'Lightest' Blockchain"},
-//   {img: "/video/1-5.png", tab: 1, id: 5, url: "https://www.youtube.com/watch?v=4gD2P0UHt-I", zh_Name: "新的ICO：什么是Mina协议？支持者是？您该如何参与", en_name: "Yeni ICO: Mina Protokol Nedir? Destekleyicileri Kimler? Nasıl Katılabilirsiniz?"},
-//   {img: "/video/2-1.png", tab: 2, id: 6, url: "https://www.youtube.com/watch?app=desktop&v=JUC0w-LUyFU", zh_Name: "snark技术赋能defi平台：Teller", en_name: "SNARK-Powered Defi Platform ft. Teller"},
-//   {img: "/video/2-2.png", tab: 2, id: 7, url: "https://www.crowdcast.io/e/mina-illuminate-summit/7", zh_Name: "在Mina上开发", en_name: "Building on Mina"},
-//   {img: "/video/2-3.png", tab: 2, id: 8, url: "https://www.crowdcast.io/e/mina-illuminate-summit/10", zh_Name: "零知识状态", en_name: "The State of Zero Knowledge"},
-//   {img: "/video/2-4.png", tab: 2, id: 9, url: "https://www.crowdcast.io/e/mina-illuminate-summit/1", zh_Name: "欢迎辞&主题演讲", en_name: "Welcome & Keynote Address"},
-//   {img: "/video/2-5.png", tab: 2, id: 10, url: "https://zoom.us/rec/play/DVdhBRDXk_QWqvPEuVjnIj-O4MI-B6LxnY7GOwXFBcHCSpGuVPrxhsT2bxsf3lsE-raQKGniJNh931KQ.4Q38A630FPbWY54f?startTime=1614189800000&_x_zm_rtaid=wgajh1pxSDCTB-Zg5iKNSQ.1617971323227.4a66de1c4654ce8d60fcf7a99e58d7bb&_x_zm_rhtaid=241", zh_Name: "Mina Genesis第5批开启", en_name: "Mina Genesis Cohort 5 Kick-off Call"},
-//   {img: "/video/2-6.png", tab: 2, id: 11, url: "https://www.crowdcast.io/e/mina-illuminate-summit/6", zh_Name: "Snapps的计算机系统和进展", en_name: "Snapps Architecture & Progress"},
-//   {img: "/video/2-7.png", tab: 2, id: 12, url: "https://www.crowdcast.io/e/mina-illuminate-summit/3", zh_Name: "Mina概况&产品路线图", en_name: "Mina Overview & Product Roadmap"},
-
-//   {img: "/video/3-1.png", tab: 3, id: 13, url: "https://m.youtube.com/watch?v=ZmQcbV-VzFk", zh_Name: "智能手机上的区块链", en_name: "Блокчейн на Смартфоне (Blockchain in the Smartphone) l Понимающий в теме"},
-//   {img: "/video/3-2.png", tab: 3, id: 14, url: "https://m.youtube.com/watch?v=8GOY8uFal4I&feature=youtu.be", zh_Name: "Mina协议 -更轻的比特币和更安全的以太坊", en_name: "Mina Protocol - Легче Bitcoin и Безопаснее Ethereum"},
-//   {img: "/video/3-3.png", tab: 3, id: 15, url: "https://m.youtube.com/watch?v=eE70WajAnas&feature=youtu.be", zh_Name: "Mina协议回顾 - 世界上最轻的区块链，由参与者赋能！", en_name: "Mina Protocol Review - The world's lightest blockchain, powered by Participants! [Honest Opinion]"},
-//   {img: "/video/3-4.png", tab: 3, id: 16, url: "https://m.youtube.com/watch?v=9DkfE3zd_hw&feature=youtu.be", zh_Name: "Mina 协议 G.2021，基于 zk-SNARK 技术", en_name: "Mina Protocol ГЕМ 2021 года который работает на базе технологии zk-SNARK"},
-//   {img: "/video/3-5.png", tab: 3, id: 17, url: "https://m.youtube.com/watch?v=h2pKPkID-ag&feature=youtu.be", zh_Name: "代币GEM -MINA协议-O(1) Labs-最轻的区块链，但具有巨大的潜力！", en_name: "Altcoin GEM- MINA Protocol - O(1) Labs - The lightest blockchain yet with huge potential!"},
-//   {img: "/video/3-6.png", tab: 3, id: 18, url: "https://m.youtube.com/watch?v=YzUqi59Bq_4&feature=youtu.be", zh_Name: "MINA PROTOCOL-在哪里购买Mina Token", en_name: "MINA PROTOCOL. ГДЕ КУПИТЬ ТОКЕН MINA. ТОКЕНОМИКА ПРОЕКТА"},
-//   {img: "/video/3-7.png", tab: 3, id: 19, url: "https://m.youtube.com/watch?v=gdXmww5xHBw", zh_Name: "Mina 协议是 zk-ZNARK 的加密启动项目和技术的完整概述", en_name: "Mina Protocol полный обзор проекта и технологии zk-ZNARK \ crypto startups"},
-//   {img: "/video/3-8.png", tab: 3, id: 20, url: "https://m.youtube.com/watch?v=9i0GoU7kOfU", zh_Name: "MINA是最轻的区块链！", en_name: "Mina Protocol (MINA) обзор. Самый легкий блокчейн!"},
-//   {img: "/video/3-9.png", tab: 3, id: 21, url: "https://m.youtube.com/watch?v=oivxKRg3uGE&feature=youtu.be", zh_Name: "Mina是最分散的区块链网络之一", en_name: "Mina Protocol является одной из самых децентрализованных блокчейн сетей"},
-
-//   {img: "/video/4-1.png", tab: 4, id: 22, url: "https://m.youtube.com/watch?v=DWdS0QWVqyY", zh_Name: "Labs和Mina Protocol的BizDev副总裁Emre Tekisalp |区块链", en_name: "Emre Tekisalp, VP of BizDev at (O)1 Labs and Mina Protocol | Blockchain"},
-//   {img: "/video/4-1.png", tab: 4, id: 23, url: "https://m.youtube.com/watch?v=7ST9VVA_Udg", zh_Name: "Coda协议-使用zk-SNARKs创建简洁的区块链", en_name: "Coda Protocol - Using zk-SNARKs to create a succinct blockchain"},
-//   {img: "/video/4-1.png", tab: 4, id: 24, url: "https://m.youtube.com/watch?v=4mI5MXpxN9U", zh_Name: "Mina主网，测试网介绍", en_name: "Mina Mainnet &Testnet intro"},
-//   {img: "/video/4-1.png", tab: 4, id: 25, url: "https://zoom.us/rec/play/Xy1o2zKOWET9d0wmP7UwDylxjNMiutM2s2LkmTHpgJ_-E1uq8GRvpNkHlIliyWPF4-sOJnPwjgAQOvmc.o41EXBxn_sdNOCQS?startTime=1612371744000&_x_zm_rtaid=rtq8Ro44ShKZseT865Q1JQ.1618045231271.a5fcfec915abd31e2976c6189f503f74&_x_zm_rhtaid=786", zh_Name: "Mainnet区块生产者办公时间", en_name: "Mainnet Block Producer Office Hours"},
-//   {img: "/video/4-1.png", tab: 4, id: 26, url: "https://m.youtube.com/watch?v=M9lE2lgyVEo&feature=emb_title", zh_Name: "连接到Mina Testnet(谷歌云)", en_name: "Connecting to the Mina Testnet (Google Cloud)"},
-//   {img: "/video/4-1.png", tab: 4, id: 27, url: "https://www.crowdcast.io/e/mina-illuminate-summit/9", zh_Name: "质押作为服务", en_name: "Staking as a Service"},
-// ];

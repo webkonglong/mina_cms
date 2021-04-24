@@ -13,9 +13,10 @@ export default () => {
   const [tab, setTab] = useState<number>(0);
   const [data, setData] = useState<any[]>([]);
 
-  useEffect(() => {
-    setData(originData.filter((item) => item.tab === tab + 1));
-  }, [tab]);
+  // useEffect(() => {
+  //   setData(originData.filter((item) => item.tab === tab + 1));
+  //   console.log(tab, originData.filter((item) => item.tab === tab + 1))
+  // }, [tab]);
 
   return (
     <div>
@@ -32,26 +33,28 @@ export default () => {
           }}
         />
         <div className={styles.data}>
-          {data.map((item, i) => (
-            <div key={item.id} className={styles.item}>
-              <div className={styles.itemImg}>
-                <img src={item.img} alt="" />
-                <div className={styles.link}>
-                  <Icon
-                    onClick={() => {
-                      if (item.url) {
-                        window.open(item.url);
-                      } else {
-                        message.error('暂无页面');
-                      }
-                    }}
-                    type="iconExternallink_icon"
-                  />
+          {originData
+            .filter((item) => item.tab === tab + 1)
+            .map((item, i) => (
+              <div key={item.id} className={styles.item}>
+                <div className={styles.itemImg}>
+                  <img src={item.img} alt="" />
+                  <div className={styles.link}>
+                    <Icon
+                      onClick={() => {
+                        if (item.url) {
+                          window.open(item.url);
+                        } else {
+                          message.error('暂无页面');
+                        }
+                      }}
+                      type="iconExternallink_icon"
+                    />
+                  </div>
                 </div>
+                {item.name && <p>{item.name}</p>}
               </div>
-              {item.name && <p>{item.name}</p>}
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </div>
