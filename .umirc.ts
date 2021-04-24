@@ -7,6 +7,8 @@ export default defineConfig({
   },
   routes: routes,
   fastRefresh: {},
+  title: 'Mina',
+  favicon: '/favicon.jpg',
   theme: {
     'primary-color': 'rgb(254, 97, 64)',
   },
