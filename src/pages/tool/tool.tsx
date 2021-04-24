@@ -1,14 +1,17 @@
 import Banner from '@/component/banner';
 import styles from './tool.less';
 import Tab from '@/component/tab';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { message } from 'antd';
 import originData from './data';
 import Icon from '@/component/icon';
+import language from './i18n';
+import { StoreContext } from '@/context/languageContext';
 
 export default () => {
   const [tab, setTab] = useState<number>(0);
   const [data, setData] = useState<any[]>([]);
+  const { state } = useContext(StoreContext);
 
   useEffect(() => {
     if (tab === 0) {
@@ -20,21 +23,16 @@ export default () => {
 
   return (
     <div>
-      <Banner
-        title={[
-          'Mina 旨在打造一个蓬勃的去中心化网络和',
-          '开放的可编程货币—所有人都能参与、创造、交易和壮大',
-        ]}
-      />
+      <Banner title={[language[state.language]['banner']]} />
       <div className={styles.body}>
         <Tab
           tabs={[
-            '全部',
-            '区块链浏览器',
-            '钱包',
-            '运维工具',
-            '基础设施',
-            '其他',
+            language[state.language]['all'],
+            language[state.language]['blockchainExplorer'],
+            language[state.language]['wallet'],
+            language[state.language]['operations'],
+            language[state.language]['infrastructure'],
+            language[state.language]['others'],
           ]}
           tab={tab}
           change={(tab) => {
@@ -59,8 +57,12 @@ export default () => {
                   />
                 </div>
               </div>
-              <p className={styles.name}>{item.zh_name}</p>
-              <p className={styles.title}>{item.zh_title}</p>
+              <p className={styles.name}>
+                {state.language === 'zh' ? item.zh_name : item.en_name}
+              </p>
+              <p className={styles.title}>
+                {state.language === 'zh' ? item.zh_title : item.en_title}
+              </p>
             </div>
           ))}
         </div>

@@ -92,8 +92,10 @@ html, body, #root {
   text-align: center;
 }
 
-.c-min-banner p {
-	margin: 0 0 5px 0;
+.c-min-banner div {
+	width: 1400px;
+	text-align: center;
+	margin: 0 auto;
 }
 
 
