@@ -13,3 +13,9 @@ Start the dev server,
 ```bash
 $ yarn start
 ```
+
+build 
+
+```bash
+$ yarn build
+```
