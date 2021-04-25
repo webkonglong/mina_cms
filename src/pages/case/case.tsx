@@ -6,6 +6,7 @@ import originData from './data.tsx';
 import { history } from 'umi';
 import language from './i18n';
 import { StoreContext } from '@/context/languageContext';
+import Icon from '@/component/icon';
 
 export default () => {
   const [tab, setTab] = useState<number>(0);
@@ -28,12 +29,20 @@ export default () => {
           tabs={[
             language[state.language]['all'],
             language[state.language]['developerOriented'],
+            language[state.language]['ouserOriented'],
+            language[state.language]['institutionoriented'],
           ]}
           tab={tab}
           change={(tab) => {
             setTab(tab);
           }}
         />
+
+        {data.length === 0 && (
+          <div className={styles.no}>
+            <Icon type="iconzanwushuju" />
+          </div>
+        )}
         {data.map((item) => (
           <div
             key={item.id}

@@ -1,7 +1,7 @@
 import Banner from '@/component/banner';
 import styles from './ecology.less';
 import Tab from '@/component/tab';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useContext } from 'react';
 import originData from './data';
 import Icon from '@/component/icon';
 import { message } from 'antd';
@@ -11,7 +11,6 @@ import { StoreContext } from '@/context/languageContext';
 export default () => {
   const { state } = useContext(StoreContext);
   const [tab, setTab] = useState<number>(0);
-  const [data, setData] = useState<any[]>([]);
 
   // useEffect(() => {
   //   setData(originData.filter((item) => item.tab === tab + 1));
