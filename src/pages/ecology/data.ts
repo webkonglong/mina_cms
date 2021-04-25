@@ -126,7 +126,13 @@ export default [
     tab: 2,
     id: 18,
   },
-  { img: '/ecology/11-9.png', url: '', name: '', tab: 2, id: 19 },
+  {
+    img: '/ecology/11-9.png',
+    url: 'https://www.block123.com/zh-hans/nav/816572280341.htm',
+    name: '',
+    tab: 2,
+    id: 19,
+  },
   {
     img: '/ecology/11-10.png',
     url: 'https://dekrypt.capital/',

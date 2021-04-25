@@ -21,6 +21,7 @@ html, body, #root {
 
 .logo {
 	font-size: 90px;
+	cursor: pointer;
 }
 
 .ant-layout {
@@ -41,7 +42,7 @@ html, body, #root {
 	line-height: 90px;
 }
 
-.app-menu span {
+.app-menu .app-menu-span {
 	margin-left: 50px;
 	cursor: pointer;
 }
@@ -205,4 +206,64 @@ html, body, #root {
 	position: absolute;
 	top: 0px;
 	left: 0px;
+}
+
+
+
+.c-select {
+	height: 36px;
+	width: 100px;
+	line-height: 36px;
+	position: relative;
+	display: inline-block;
+	float: right;
+	top: 26px;
+	margin-left: 50px;
+}
+
+.c-select-value {
+	height: 36px;
+	width: 120px;
+	cursor: pointer;
+	color: #FF603B;
+}
+
+.c-select-icon {
+	font-size: 18px;
+	color: #000;
+	margin-right: 7px;
+	position: relative;
+	top: 2px;
+}
+
+.c-select-value-text {
+	font-size: 18px;
+	color: #FF603B;
+}
+
+.c-select-option {
+	position: absolute;
+	top: 36px;
+	left: 1px;
+	background-color: #2D2D2D;
+	width: 116px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.c-select-option-item {
+	height: 50px;
+	line-height: 50px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.c-select-option-item:hover {
+	background-color: #FF603B;
+}
+
+.c-select-icon-toggle {
+	color: #333;
+	font-size: 16px;
+	margin-left: 6px;
 }

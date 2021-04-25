@@ -30,7 +30,7 @@ export default () => {
             language[state.language]['intruduction'],
             language[state.language]['case'],
             language[state.language]['activities'],
-            'Mina Labs video',
+            '(O)1 Labs',
           ]}
           tab={tab}
           change={(tab) => {

@@ -2,7 +2,7 @@ export default {
   zh: {
     all: '全部',
     blockchainExplorer: '区块链浏览器',
-    wallet: '案钱包例',
+    wallet: '钱包',
     operations: '运维工具',
     infrastructure: '基础设施',
     others: '其他',

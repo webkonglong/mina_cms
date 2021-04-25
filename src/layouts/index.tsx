@@ -1,5 +1,5 @@
 import { useState, useEffect, useReducer } from 'react';
-import { Layout, Select } from 'antd';
+import { Layout } from 'antd';
 import { history } from 'umi';
 import menu from './menu';
 import Icon from '@/component/icon';
@@ -8,6 +8,7 @@ import { reducer, initialState, StoreContext } from '@/context/languageContext';
 export default (props: { children: React.FC; location: any }): JSX.Element => {
   const [router, setRouter] = useState<string>('');
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [isshow, toggle] = useState<boolean>(false);
 
   useEffect(() => {
     let pathname = props.location.pathname;
@@ -31,12 +32,22 @@ export default (props: { children: React.FC; location: any }): JSX.Element => {
     <Layout>
       <StoreContext.Provider value={{ state, dispatch }}>
         <Layout.Header>
-          <Icon type="iconmina-logo" className="logo" />
+          <Icon
+            type="iconmina-logo"
+            className="logo"
+            onClick={() => {
+              history.push('/');
+            }}
+          />
           <span className="app-menu">
             {menu.map((item) => (
               <span
                 key={item.url}
-                className={router === item.url ? 'active-menu' : ''}
+                className={
+                  router === item.url
+                    ? 'app-menu-span  active-menu'
+                    : 'app-menu-span '
+                }
                 onClick={() => {
                   setRouter(item.url);
                   history.push(item.url);
@@ -45,7 +56,7 @@ export default (props: { children: React.FC; location: any }): JSX.Element => {
                 {state.language === 'en' ? item.en_titke : item.zh_title}
               </span>
             ))}
-            <Select
+            {/* <Select
               placeholder="选择语言"
               style={{ width: 148 }}
               bordered={false}
@@ -59,7 +70,52 @@ export default (props: { children: React.FC; location: any }): JSX.Element => {
             >
               <Select.Option value="zh">简体中文</Select.Option>
               <Select.Option value="en">English</Select.Option>
-            </Select>
+            </Select> */}
+            <div className="c-select">
+              <div
+                className="c-select-value"
+                onClick={() => {
+                  toggle(!isshow);
+                }}
+              >
+                <Icon className="c-select-icon" type="iconChangeRegion_b" />
+                <span className="c-select-value-text">
+                  {state.language === 'zh' ? '简体中文' : 'English'}
+                </span>
+                <Icon
+                  className="c-select-icon-toggle"
+                  type={isshow ? 'iconbottom' : 'iconiconup'}
+                />
+              </div>
+              {isshow && (
+                <div className="c-select-option">
+                  <div
+                    onClick={() => {
+                      dispatch({
+                        type: 'CHANGE_LANGUAGE',
+                        payload: { language: 'zh' },
+                      });
+                      toggle(false);
+                    }}
+                    className="c-select-option-item"
+                  >
+                    简体中文
+                  </div>
+                  <div
+                    onClick={() => {
+                      dispatch({
+                        type: 'CHANGE_LANGUAGE',
+                        payload: { language: 'en' },
+                      });
+                      toggle(false);
+                    }}
+                    className="c-select-option-item"
+                  >
+                    English
+                  </div>
+                </div>
+              )}
+            </div>
           </span>
         </Layout.Header>
         {props.children}
@@ -98,7 +154,7 @@ export default (props: { children: React.FC; location: any }): JSX.Element => {
             onClick={() => {
               backToTop();
             }}
-            type="iconhuidaodingbu"
+            type={state.language === 'en' ? 'icontop1' : 'iconhuidaodingbu2'}
             className="back-to-top"
           />
         </Layout.Footer>
