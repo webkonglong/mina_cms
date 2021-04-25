@@ -2174,7 +2174,7 @@ export default [
       'At Mina, our ambition is to design technology that empowers people. To rebalance the scales and give anyone with a smartphone the power to participate — without compromising their personal data, without having to trust any intermediaries, without being beholden to centralized players. In order to accomplish this, we need to get everyone permissionless access to crypto, and then give them the tools to build or use powerful, user-first systems and applications...',
     zh_body: (
       <>
-        <img src="/news/10-1.jpg" alt="" />
+        <img src="/news/10-1.png" alt="" />
         <p>
           At Mina, our ambition is to design technology that empowers people. To
           rebalance the scales and give anyone with a smartphone the power to
@@ -2228,7 +2228,7 @@ export default [
         </ul>
         <p>So, in summary…</p>
         <h2>Mina Solves (at least) Three Problems</h2>
-        <img src="/news/10-2.jpg" alt="" />
+        <img src="/news/10-2.png" alt="" />
         <p>
           These three features make Mina a powerful tool — but what are we
           building with it?
@@ -2242,7 +2242,7 @@ export default [
           future we all deserve.
         </p>
         <h3>01 / End-to-End Data Privacy: From Online to On-chain</h3>
-        <img src="/news/10-3.jpg" alt="" />
+        <img src="/news/10-3.png" alt="" />
         <p>
           What is it? Users can access critical on-chain services without
           sharing their personal data. Instead, they use Mina to access their
@@ -2296,7 +2296,7 @@ export default [
           much more.
         </p>
         <h2>02 / Permissionless Web Oracles.</h2>
-        <img src="/news/10-4.jpg" alt="" />
+        <img src="/news/10-4.png" alt="" />
         <p>
           What is it? With Mina’s Snapps, developers can leverage private,
           verified, real world data from any website to build decentralized
@@ -2328,7 +2328,7 @@ export default [
           able to connect to any website that uses HTTPS.
         </p>
         <h2>03 / One Private Internet Login.</h2>
-        <img src="/news/10-5.jpg" alt="" />
+        <img src="/news/10-5.png" alt="" />
         <p>
           What is it? Users can access any internet website or service privately
           — without creating an account and handing over their personal data.
@@ -2371,7 +2371,7 @@ export default [
     ),
     en_body: (
       <>
-        <img src="/news/10-1.jpg" alt="" />
+        <img src="/news/10-1.png" alt="" />
         <p>
           At Mina, our ambition is to design technology that empowers people. To
           rebalance the scales and give anyone with a smartphone the power to
@@ -2425,7 +2425,7 @@ export default [
         </ul>
         <p>So, in summary…</p>
         <h2>Mina Solves (at least) Three Problems</h2>
-        <img src="/news/10-2.jpg" alt="" />
+        <img src="/news/10-2.png" alt="" />
         <p>
           These three features make Mina a powerful tool — but what are we
           building with it?
@@ -2439,7 +2439,7 @@ export default [
           future we all deserve.
         </p>
         <h3>01 / End-to-End Data Privacy: From Online to On-chain</h3>
-        <img src="/news/10-3.jpg" alt="" />
+        <img src="/news/10-3.png" alt="" />
         <p>
           What is it? Users can access critical on-chain services without
           sharing their personal data. Instead, they use Mina to access their
@@ -2493,7 +2493,7 @@ export default [
           much more.
         </p>
         <h2>02 / Permissionless Web Oracles.</h2>
-        <img src="/news/10-4.jpg" alt="" />
+        <img src="/news/10-4.png" alt="" />
         <p>
           What is it? With Mina’s Snapps, developers can leverage private,
           verified, real world data from any website to build decentralized
@@ -2525,7 +2525,7 @@ export default [
           able to connect to any website that uses HTTPS.
         </p>
         <h2>03 / One Private Internet Login.</h2>
-        <img src="/news/10-5.jpg" alt="" />
+        <img src="/news/10-5.png" alt="" />
         <p>
           What is it? Users can access any internet website or service privately
           — without creating an account and handing over their personal data.
