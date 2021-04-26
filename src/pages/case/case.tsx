@@ -24,7 +24,7 @@ export default () => {
   return (
     <>
       <Banner title={[language[state.language]['banner']]} />
-      <div className={styles.body}>
+      <div className={styles.body} style={{ width: '1400px' }}>
         <Tab
           tabs={[
             language[state.language]['all'],
@@ -40,7 +40,8 @@ export default () => {
 
         {data.length === 0 && (
           <div className={styles.no}>
-            <Icon type="iconzanwushuju" />
+            <Icon className={styles.noDataicon} type="iconzanwushuju" />
+            <p>{state.language === 'zh' ? '暂无数据' : 'No data'}</p>
           </div>
         )}
         {data.map((item) => (
