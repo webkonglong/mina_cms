@@ -178,8 +178,8 @@ html, body, #root {
 
 
 .c-video-loading {
-	width: 1400px;
-	height: 788px;
+	width: 1200px;
+	height: 675px;
 	text-align: center;
 	font-size: 50px;
 	color: rgba(0, 0, 0, 0.55);
@@ -201,14 +201,14 @@ html, body, #root {
 }
 
 .video-player-box {
-	width: 1400px;
-	height: 788px;
+	width: 1200px;
+	height: 675px;
 	position: relative;
 }
 
 .video-player {
-	width: 1400px;
-	height: 788px;
+	width: 1200px;
+	height: 675px;
 	position: absolute;
 	top: 0px;
 	left: 0px;
