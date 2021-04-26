@@ -23,7 +23,11 @@ export default () => {
       </div>
       <div className={styles.time}>
         <span style={{ marginRight: '20px' }}>{data.time}</span>
-        <span>{data?.source}</span>
+        <span>
+          <a href={data.sourceurl} target="_blank">
+            {data?.source}
+          </a>
+        </span>
       </div>
       {state.language === 'zh' ? data.zh_body : data.en_body}
     </div>
