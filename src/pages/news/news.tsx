@@ -41,7 +41,11 @@ export default () => {
             key={item.id}
             className={styles.news}
             onClick={() => {
-              history.push('/news-details?id=' + item.id);
+              if (item?.url) {
+                window.open(item.url);
+              } else {
+                history.push('/news-details?id=' + item.id);
+              }
             }}
           >
             <img src={item.img} alt="" />

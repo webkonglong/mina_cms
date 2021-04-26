@@ -128,7 +128,7 @@ export default [
   },
   {
     img: '/ecology/11-9.png',
-    url: 'https://www.block123.com/zh-hans/nav/816572280341.htm',
+    url: 'https://o1labs.org/',
     name: '',
     tab: 2,
     id: 19,

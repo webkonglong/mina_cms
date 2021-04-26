@@ -42,17 +42,17 @@ export default () => {
             <div key={item.id} className={styles.item}>
               <div className={styles.itemImg}>
                 <img src={item.img} alt="" />
-                <div className={styles.link}>
-                  <Icon
-                    type="iconplayback_icon"
-                    onClick={() => {
-                      if (item.url.startsWith('http')) {
-                        window.open(item.url);
-                      } else {
-                        history.push('/play?id=' + item.id);
-                      }
-                    }}
-                  />
+                <div
+                  className={styles.link}
+                  onClick={() => {
+                    if (item.url.startsWith('http')) {
+                      window.open(item.url);
+                    } else {
+                      history.push('/play?id=' + item.id);
+                    }
+                  }}
+                >
+                  <Icon type="iconplayback_icon" />
                 </div>
               </div>
               <p>{state.language === 'zh' ? item.zh_Name : item.en_name}</p>

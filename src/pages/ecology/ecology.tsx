@@ -38,17 +38,17 @@ export default () => {
               <div key={item.id} className={styles.item}>
                 <div className={styles.itemImg}>
                   <img src={item.img} alt="" />
-                  <div className={styles.link}>
-                    <Icon
-                      onClick={() => {
-                        if (item.url) {
-                          window.open(item.url);
-                        } else {
-                          message.error('暂无页面');
-                        }
-                      }}
-                      type="iconExternallink_icon"
-                    />
+                  <div
+                    className={styles.link}
+                    onClick={() => {
+                      if (item.url) {
+                        window.open(item.url);
+                      } else {
+                        message.error('暂无页面');
+                      }
+                    }}
+                  >
+                    <Icon type="iconExternallink_icon" />
                   </div>
                 </div>
                 {item.name && <p>{item.name}</p>}

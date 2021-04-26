@@ -4,11 +4,12 @@ export default [
     tab: 1,
     img: '/news/1.png',
     time: '2021-4-14',
+    url: 'https://twitter.com/MinaProtocol/status/1382069965918982145',
     source: 'Source：Mina Protocol twitter',
-    zh_name: "Mina's public token sale is now complete!",
+    zh_name: 'Mina的公开代币销售现已完成！',
     en_name: "Mina's public token sale is now complete!",
     zh_introduction:
-      "Mina's public token sale is now complete! More than 40k people took part in the sale, which sold out in under four hours....",
+      'Mina的公开代币销售现在完成了！超过4万人参加了这次拍卖，不到4小时就售空....',
     en_introduction:
       "Mina's public token sale is now complete! More than 40k people took part in the sale, which sold out in under four hours....",
     zh_body: (

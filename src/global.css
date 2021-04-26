@@ -167,11 +167,11 @@ html, body, #root {
 }
 
 .back-to-top {
+	position: fixed;
 	font-size: 60px;
 	cursor: pointer;
-	float: right;
-	vertical-align: top;
-	margin-top: 90px;
+	bottom: 90px;
+	right: 90px;
 	color: #000;
 }
 
