@@ -15,7 +15,7 @@ html, body, #root {
 }
 
 .body {
-	width: 1400px;
+	width: 1200px;
 	margin: 0 auto;
 }
 
@@ -32,7 +32,7 @@ html, body, #root {
 	background-color: #fff !important;
 	padding: 0px 30px 0 260px !important;
 	height: 90px !important;
-	min-width: 1400px;
+	min-width: 1200px;
 }
 
 .app-menu {
@@ -92,10 +92,11 @@ html, body, #root {
   color: #222;
   padding-top: 92px;
   text-align: center;
+  min-width: 1200px;
 }
 
 .c-min-banner div {
-	width: 1400px;
+	width: 1200px;
 	text-align: center;
 	margin: 0 auto;
 }

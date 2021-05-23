@@ -24,7 +24,7 @@ export default () => {
   return (
     <>
       <Banner title={[language[state.language]['banner']]} />
-      <div className={styles.body} style={{ width: '1400px' }}>
+      <div className={styles.body} style={{ width: '1200px' }}>
         <Tab
           tabs={[
             language[state.language]['all'],

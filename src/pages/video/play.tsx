@@ -24,7 +24,7 @@ export default () => {
         ) {
           new window.YT.Player('player', {
             height: '675',
-            width: '1200',
+            width: '1000',
             videoId: data?.url,
             events: {
               onReady: onPlayerReady,

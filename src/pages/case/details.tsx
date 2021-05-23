@@ -26,7 +26,7 @@ export default () => {
         ) {
           new window.YT.Player('case-player', {
             height: '788',
-            width: '1400',
+            width: '1200',
             videoId: data?.url,
             events: {
               onReady: onPlayerReady,
